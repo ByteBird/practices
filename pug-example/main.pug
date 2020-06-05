@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+
+    - let menu = ['Home', 'Shop', 'About', 'Download']
+        .header-container
+            header
+                nav.nav-bar
+                    ul.nav-list
+                        each option in menu
+                            li: a(href=`${option.toLowerCase()}.html`)= option
+        -
+            let articulos = [{
+                titulo: 'zapatos',
+                url: 'zapatos.html',
+                child:[{
+                    nombre: 'La tieza',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                    }]
+                },
+                {
+                    nombre: 'vertigo',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Lorems',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'EQUAL',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'fiNAL',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                }]
+            },
+            {
+                titulo: 'pantalones',
+                url: 'pantalones.html',
+                child:[{
+                    nombre: 'Rooling',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                    }]
+                },
+                {
+                    nombre: 'Scrum',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Master',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Plasure',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Fines',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                }]
+            },
+            {
+                titulo: 'polos',
+                url: 'polos.html',
+                child:[{
+                    nombre: 'La Squirty',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                    }]
+                },
+                {
+                    nombre: 'Gore',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'La tieza',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Chicken',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                },
+                {
+                    nombre: 'Storm',
+                    descripcion: [{
+                        talla: '42',
+                        color: 'marron',
+                        suela: 'jebe',
+                        precio: '35'
+                }]
+                }]
+            }]
+        .main-container
+            main
+                each articulo, key in articulos
+                    section(class=`${articulo.titulo}`)
+                        articles.articles
+                            if articulo.child.length > 0
+                                each subpage in articulo.child
+                                    ul
+                                        li: a(href="#" class=`${subpage.nombre.toLowerCase().replace(' ','-')}`)= subpage.nombre
+        .footer-container
+            footer
