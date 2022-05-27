@@ -1,0 +1,13 @@
+.header-container
+    header.header 
+        h1.title OFFICE
+            span SACE 
+            <i class="fa-brands fa-canadian-maple-leaf"></i>
+        nav.nav-bar 
+            ul.nav-list 
+                each option in options
+                    li.nav-item
+                        a.nav-link= option
+                            <i class="fa-solid fa-angle-down"></i>
+                li.nav-item
+                        a.nav-link Request a demo
